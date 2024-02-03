@@ -8,6 +8,7 @@ target 'NewsApp' do
   # Pods for NewsApp
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'SkeletonView'
 
   target 'NewsAppTests' do
     inherit! :search_paths

@@ -8,17 +8,20 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
+    var router: HomeRouter?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UINavigationController(rootViewController: HomeController())
+            let navigation = UINavigationController()
+            window.rootViewController = navigation
             self.window = window
             window.makeKeyAndVisible()
+            router = HomeRouter(navigation, title: "News Categories")
+            router?.start()
         }
     }
 

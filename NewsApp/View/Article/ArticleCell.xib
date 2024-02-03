@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="167" id="KGk-i7-Jjw" customClass="ArticleCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="525" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="525" height="167"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esu-Ek-avw">
+                        <rect key="frame" x="353" y="12" width="160" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="Csw-zu-2HY"/>
+                            <constraint firstAttribute="width" secondItem="Esu-Ek-avw" secondAttribute="height" multiplier="4:3" id="ZP1-lF-5LS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special counsel questioned witnesses about 2 rooms FBI didn't search inside Trump's Mar-a-Lago residence: Sources" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saQ-AZ-Pjm">
+                        <rect key="frame" x="12" y="12" width="329" height="61"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytp-0G-GkQ">
+                        <rect key="frame" x="12" y="85" width="73" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Esu-Ek-avw" firstAttribute="leading" secondItem="saQ-AZ-Pjm" secondAttribute="trailing" constant="12" id="1EC-fL-gqJ"/>
+                    <constraint firstItem="saQ-AZ-Pjm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="4bp-jO-e8N"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Esu-Ek-avw" secondAttribute="bottom" constant="12" id="5d6-vY-Euh"/>
+                    <constraint firstItem="saQ-AZ-Pjm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="B9Y-Gm-9gb"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ytp-0G-GkQ" secondAttribute="bottom" constant="12" id="Dpv-qp-jmG"/>
+                    <constraint firstAttribute="trailing" secondItem="Esu-Ek-avw" secondAttribute="trailing" constant="12" id="FhO-gE-8UL"/>
+                    <constraint firstItem="ytp-0G-GkQ" firstAttribute="top" secondItem="saQ-AZ-Pjm" secondAttribute="bottom" constant="12" id="Gz6-Xc-Mce"/>
+                    <constraint firstItem="Esu-Ek-avw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ZcG-oT-3mi"/>
+                    <constraint firstItem="ytp-0G-GkQ" firstAttribute="leading" secondItem="saQ-AZ-Pjm" secondAttribute="leading" id="rkB-e3-77J"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgNews" destination="Esu-Ek-avw" id="MIT-lc-c2x"/>
+                <outlet property="lblDate" destination="ytp-0G-GkQ" id="9rX-b3-Rw0"/>
+                <outlet property="lblTitle" destination="saQ-AZ-Pjm" id="djM-QF-uef"/>
+            </connections>
+            <point key="canvasLocation" x="178.98550724637681" y="63.179347826086961"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
