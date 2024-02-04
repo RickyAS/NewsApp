@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="177" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="696-hi-Krc">
+                        <rect key="frame" x="0.0" y="0.0" width="177" height="165"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="xcS-98-Lmp">
+                                <rect key="frame" x="12" y="124" width="153" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HqY-V3-IAQ">
+                                <rect key="frame" x="12" y="60.333333333333314" width="52" height="51.666666666666686"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="3Hf-FE-FIv"/>
+                                    <constraint firstAttribute="width" constant="52" id="m9o-2z-i4L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="xcS-98-Lmp" firstAttribute="leading" secondItem="696-hi-Krc" secondAttribute="leading" constant="12" id="3fM-ho-r2u"/>
+                            <constraint firstItem="xcS-98-Lmp" firstAttribute="top" secondItem="HqY-V3-IAQ" secondAttribute="bottom" constant="12" id="OTL-kU-YCI"/>
+                            <constraint firstAttribute="bottom" secondItem="xcS-98-Lmp" secondAttribute="bottom" constant="12" id="cwe-8u-XL8"/>
+                            <constraint firstItem="HqY-V3-IAQ" firstAttribute="leading" secondItem="xcS-98-Lmp" secondAttribute="leading" id="eR9-7J-NPA"/>
+                            <constraint firstAttribute="trailing" secondItem="xcS-98-Lmp" secondAttribute="trailing" constant="12" id="mhR-Qv-Lqd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="696-hi-Krc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7QZ-GR-wzu"/>
+                <constraint firstItem="696-hi-Krc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Lhk-iS-UF3"/>
+                <constraint firstAttribute="bottom" secondItem="696-hi-Krc" secondAttribute="bottom" id="R3V-wi-Wf0"/>
+                <constraint firstAttribute="trailing" secondItem="696-hi-Krc" secondAttribute="trailing" id="nQL-wb-gbw"/>
+            </constraints>
+            <size key="customSize" width="177" height="165"/>
+            <connections>
+                <outlet property="imgIcon" destination="HqY-V3-IAQ" id="De4-Le-SDO"/>
+                <outlet property="lblTitle" destination="xcS-98-Lmp" id="yDM-LZ-t7b"/>
+            </connections>
+            <point key="canvasLocation" x="179.38931297709922" y="60.211267605633807"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="newspaper" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
